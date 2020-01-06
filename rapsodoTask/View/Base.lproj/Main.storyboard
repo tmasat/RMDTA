@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0qq-AE-htx">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page Controller-->
+        <scene sceneID="c56-ua-luy">
+            <objects>
+                <viewController storyboardIdentifier="HomePageController" id="0ug-AY-9Vw" customClass="HomePageController" customModule="rapsodoTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oe8-px-5EN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-R9-gg1">
+                                <rect key="frame" x="29" y="281" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Create Drill">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2QI-e9-UOT" kind="show" id="rSP-Q0-lgJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNS-W3-KPt">
+                                <rect key="frame" x="172" y="281" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Show Drills">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bv1-Wf-UlJ" kind="show" id="LEk-8W-eF8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Vb4-DT-hfc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qeK-lk-LYM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozl-Je-JmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444.375" y="-80.281690140845072"/>
+        </scene>
+        <!--Show Drill Controller-->
+        <scene sceneID="Knh-Os-ILp">
+            <objects>
+                <viewController storyboardIdentifier="ShowDrillController" id="bv1-Wf-UlJ" customClass="ShowDrillController" customModule="rapsodoTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Unn-uq-hok">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qZN-tB-XPs">
+                                <rect key="frame" x="0.0" y="44" width="320" height="404"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="99" id="4o1-tl-MXf" customClass="TableViewCell" customModule="rapsodoTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4o1-tl-MXf" id="C0q-bA-P75">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DIz-Xf-uI7">
+                                                    <rect key="frame" x="15" y="11" width="88" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="UxN-qN-OG6"/>
+                                                        <constraint firstAttribute="height" constant="77" id="h6l-Dc-h7P"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIb-gt-drB">
+                                                    <rect key="frame" x="111" y="26" width="45" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-yc-ymV">
+                                                    <rect key="frame" x="111" y="53" width="63.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DIz-Xf-uI7" firstAttribute="top" secondItem="C0q-bA-P75" secondAttribute="topMargin" id="6Dj-Kd-lzU"/>
+                                                <constraint firstItem="EIb-gt-drB" firstAttribute="leading" secondItem="BzU-yc-ymV" secondAttribute="leading" id="FpL-v9-LZJ"/>
+                                                <constraint firstItem="EIb-gt-drB" firstAttribute="top" secondItem="C0q-bA-P75" secondAttribute="topMargin" constant="15" id="Iem-10-cio"/>
+                                                <constraint firstItem="BzU-yc-ymV" firstAttribute="top" secondItem="EIb-gt-drB" secondAttribute="bottom" constant="6.5" id="P6V-zp-Lc2"/>
+                                                <constraint firstItem="EIb-gt-drB" firstAttribute="leading" secondItem="DIz-Xf-uI7" secondAttribute="trailing" constant="8" id="fYs-br-kik"/>
+                                                <constraint firstItem="DIz-Xf-uI7" firstAttribute="top" secondItem="C0q-bA-P75" secondAttribute="topMargin" id="huP-io-IHk"/>
+                                                <constraint firstItem="DIz-Xf-uI7" firstAttribute="leading" secondItem="C0q-bA-P75" secondAttribute="leadingMargin" id="jWa-g5-ILb"/>
+                                                <constraint firstItem="DIz-Xf-uI7" firstAttribute="bottom" secondItem="C0q-bA-P75" secondAttribute="bottomMargin" id="uvA-fx-MZk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="savedTaskDuration" destination="BzU-yc-ymV" id="eOv-U2-dus"/>
+                                            <outlet property="savedTaskImage" destination="DIz-Xf-uI7" id="2Yn-yf-vxd"/>
+                                            <outlet property="savedTaskName" destination="EIb-gt-drB" id="fq2-eg-L37"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKW-cn-UyV">
+                                <rect key="frame" x="50" y="493" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1tm-sL-Zpw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bsr-Gj-Bfs"/>
+                    <connections>
+                        <outlet property="myTableView" destination="qZN-tB-XPs" id="REK-B7-NMy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g74-tx-nw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682.5" y="219.71830985915494"/>
+        </scene>
+        <!--Create Drill Controller-->
+        <scene sceneID="H7G-Lo-Yah">
+            <objects>
+                <viewController storyboardIdentifier="CreateDrillController" id="2QI-e9-UOT" customClass="CreateDrillController" customModule="rapsodoTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BfM-12-Sky">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uap-eQ-6qR">
+                                <rect key="frame" x="50" y="476" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="2QI-e9-UOT" eventType="touchUpInside" id="nHh-pT-81N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVu-K2-hRa">
+                                <rect key="frame" x="50" y="514" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drill Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohW-c0-fm9">
+                                <rect key="frame" x="50" y="340" width="220" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-YZ-kOp">
+                                <rect key="frame" x="50" y="382" width="220" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-w5-l5q">
+                                <rect key="frame" x="50" y="80" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ADE-H8-oL1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ij-46-rc0"/>
+                    <connections>
+                        <outlet property="courtImage" destination="kUu-w5-l5q" id="dXw-3A-9Hm"/>
+                        <outlet property="drillDuration" destination="6dn-YZ-kOp" id="byD-Vs-Yzb"/>
+                        <outlet property="drillName" destination="ohW-c0-fm9" id="lU3-Yc-D0y"/>
+                        <segue destination="05S-Lq-YBJ" kind="show" identifier="submittedSuccessfully" id="gcS-ox-13a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXl-V1-FUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.875" y="-502.81690140845069"/>
+        </scene>
+        <!--Drill Created Controller-->
+        <scene sceneID="x21-4E-IV6">
+            <objects>
+                <viewController storyboardIdentifier="DrillCreatedController" id="05S-Lq-YBJ" customClass="DrillCreatedController" customModule="rapsodoTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdq-Dr-PNr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A new custom Drill is Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRa-po-jWd">
+                                <rect key="frame" x="16" y="107" width="288" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgA-pj-KJL">
+                                <rect key="frame" x="50" y="447" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000758169999997" green="0.79999023680000003" blue="0.79999357459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="05S-Lq-YBJ" eventType="touchUpInside" id="sqN-L2-oVv"/>
+                                    <action selector="submitButtonPressed:" destination="2QI-e9-UOT" eventType="touchUpInside" id="AG6-tU-8Yw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Udk-PM-e8C"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="StO-ZY-T99"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCT-Eo-MJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719.375" y="-502.81690140845069"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qd1-bg-POT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0qq-AE-htx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KM7-tM-3Ku">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0ug-AY-9Vw" kind="relationship" relationship="rootViewController" id="uHf-hk-clv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPQ-SG-raw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1320" y="-80"/>
+        </scene>
+    </scenes>
+</document>
