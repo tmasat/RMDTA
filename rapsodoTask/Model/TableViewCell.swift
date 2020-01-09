@@ -12,7 +12,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var savedTaskImage: UIImageView!
     @IBOutlet weak var savedTaskName: UILabel!
     @IBOutlet weak var savedTaskDuration: UILabel!
-    
+    @IBOutlet weak var savedTaskDate: UILabel!
     
     
     override func awakeFromNib() {

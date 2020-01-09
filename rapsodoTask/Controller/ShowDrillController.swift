@@ -9,17 +9,21 @@ import UIKit
 import CoreData
 
 class ShowDrillController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let buttonBorder = ButtonBorder()
     
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
     
     var totalTaskImage = [UIImage]()
     var totalTaskDuration = [Int]()
     var totalTaskName = [String]()
+    var totalTaskDate = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getStartedForFetchData()
+        buttonBorder.addBorder(selectedButton: backButton)
+        getStartedToFetchData()
         myTableView.dataSource = self
         myTableView.delegate = self
     }
@@ -35,9 +39,10 @@ class ShowDrillController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
               
            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-           cell.savedTaskName.text = "Name = " + totalTaskName[indexPath.row]
-           cell.savedTaskDuration.text = "Duration = " + String(totalTaskDuration[indexPath.row])
+           cell.savedTaskName.text = totalTaskName[indexPath.row]
+           cell.savedTaskDuration.text = "Duration = " + String(totalTaskDuration[indexPath.row])  + " minutes"
            cell.savedTaskImage.image = totalTaskImage[indexPath.row]
+           cell.savedTaskDate.text = "Date = " + totalTaskDate[indexPath.row]
            
            return cell
         }
@@ -52,7 +57,7 @@ class ShowDrillController: UIViewController, UITableViewDelegate, UITableViewDat
        
        
        
-       func getStartedForFetchData(){
+       func getStartedToFetchData(){
            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
@@ -63,11 +68,17 @@ class ShowDrillController: UIViewController, UITableViewDelegate, UITableViewDat
                    totalTaskName.append(data.value(forKey: "taskName") as! String)
                    totalTaskDuration.append(data.value(forKey: "taskDuration") as! Int)
                    totalTaskImage.append(convertBase64ToImage(imageString: data.value(forKey: "taskImage") as! String))
+                    totalTaskDate.append(data.value(forKey: "taskDate") as! String)
                 
                 }
             } catch {
                 print("Failed")
             }
            }
-
+    
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

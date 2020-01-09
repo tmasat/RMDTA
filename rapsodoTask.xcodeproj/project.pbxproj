@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0116C323C6D3300040D16E /* ButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0116C223C6D3300040D16E /* ButtonBorder.swift */; };
 		BD52F4FD23C2A37200FC8185 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52F4FC23C2A37200FC8185 /* HomePageController.swift */; };
 		BD52F4FF23C2A3CD00FC8185 /* CreateDrillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52F4FE23C2A3CD00FC8185 /* CreateDrillController.swift */; };
 		BD52F50123C2A3FD00FC8185 /* ShowDrillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52F50023C2A3FD00FC8185 /* ShowDrillController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0116C223C6D3300040D16E /* ButtonBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorder.swift; sourceTree = "<group>"; };
 		BD52F4FC23C2A37200FC8185 /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		BD52F4FE23C2A3CD00FC8185 /* CreateDrillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDrillController.swift; sourceTree = "<group>"; };
 		BD52F50023C2A3FD00FC8185 /* ShowDrillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDrillController.swift; sourceTree = "<group>"; };
@@ -47,13 +49,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0116C423C6D4FB0040D16E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDB1464723C2E05C000F8FEB /* TableViewCell.swift */,
+				BD0116C223C6D3300040D16E /* ButtonBorder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BD52F4FA23C2A2A800FC8185 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				BD52F4FC23C2A37200FC8185 /* HomePageController.swift */,
 				BD52F4FE23C2A3CD00FC8185 /* CreateDrillController.swift */,
 				BD52F50023C2A3FD00FC8185 /* ShowDrillController.swift */,
-				BDB1464723C2E05C000F8FEB /* TableViewCell.swift */,
 				BDB1464B23C2F250000F8FEB /* DrillCreatedController.swift */,
 			);
 			path = Controller;
@@ -87,6 +97,7 @@
 		BDAFB2B323C2334C00D26116 /* rapsodoTask */ = {
 			isa = PBXGroup;
 			children = (
+				BD0116C423C6D4FB0040D16E /* Model */,
 				BD52F4FB23C2A2B400FC8185 /* View */,
 				BD52F4FA23C2A2A800FC8185 /* Controller */,
 				BDAFB2B423C2334C00D26116 /* AppDelegate.swift */,
@@ -175,6 +186,7 @@
 				BDAFB2B523C2334C00D26116 /* AppDelegate.swift in Sources */,
 				BDAFB2B723C2334C00D26116 /* SceneDelegate.swift in Sources */,
 				BDB1464823C2E05C000F8FEB /* TableViewCell.swift in Sources */,
+				BD0116C323C6D3300040D16E /* ButtonBorder.swift in Sources */,
 				BDAFB2BF23C2334C00D26116 /* rapsodoTask.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

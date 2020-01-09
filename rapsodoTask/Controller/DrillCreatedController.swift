@@ -9,8 +9,11 @@ import UIKit
 
 class DrillCreatedController: UIViewController {
 
+    @IBOutlet weak var homeButton: UIButton!
+    let buttonBorder = ButtonBorder()
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonBorder.addBorder(selectedButton: homeButton)
 
         // Do any additional setup after loading the view.
     }
@@ -18,6 +21,7 @@ class DrillCreatedController: UIViewController {
 
     @IBAction func homeButtonPressed(_ sender: Any) {
         
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 
