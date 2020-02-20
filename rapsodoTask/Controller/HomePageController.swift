@@ -20,19 +20,6 @@ class HomePageController: UIViewController {
        
         // Do any additional setup after loading the view.
         buttonBorder.addBorder(selectedButton: createDrillButton)
-        buttonBorder.addBorder(selectedButton: showDrillsButton)
-       
+        buttonBorder.addBorder(selectedButton: showDrillsButton)  
     }
-    
-    
-
-    
-    
-    
-
-   
-    
-    
-    
-
 }
